@@ -141,6 +141,18 @@ h1{
 #mydiv.clicked{
 	height: 350px;
 }
+#mydiv.clickeda{
+	height: 390px;
+}
+#mydiv.clickedb{
+	height: 430px;
+}
+#mydiv.clickedc{
+	height: 470px;
+}
+#mydiv.clickedd{
+	height: 510px;
+}
 #meddiv{
 	transition-duration: 2s;
 	flex-wrap:wrap;
@@ -148,17 +160,28 @@ h1{
 #meddiv.clicked{
 	height: 120px;
 }
-#meddiv.clicked2{
-	left: 20px;
-}
+
 #meddiv2{
 	transition-duration: 2s;
 	flex-wrap: wrap;
 	left: 20px;
 	height:120px;
 }
+#meddiv2.clickedc{
+	height: 210
+}
+#meddiv2.clicked{
+	height:150px;
+}
+#meddiv2.clickeda{
+	height:170px;
+}
+#meddiv2.clickedb{
+	height:190px;
+}
 #add{
 	right:30px;
+	top: 112.5px;
 	text-align: right;
 	font-size: 17px;
 }
