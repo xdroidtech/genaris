@@ -77,6 +77,21 @@
 					<span id="div2" class="spl2" style="background: linear-gradient(20deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
 					Xanax XR
 					</span>
+					<span id="div2" class="spl2" style="background: linear-gradient(20deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
+					Xanax XR
+					</span>
+					<span id="div2" class="spl2" style="background: linear-gradient(20deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
+					Xanax XR
+					</span>
+					<span id="div2" class="spl2" style="background: linear-gradient(20deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
+					Xanax XR
+					</span>
+					<span id="div2" class="spl2" style="background: linear-gradient(20deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
+					Xanax XR
+					</span>
+					<span id="div2" class="spl2" style="background: linear-gradient(20deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
+					Xanax XR
+					</span>
 			</div>
 			<span id="add" class="position-a">
 				6/191,Vaishnav Khand<br>Gomti Nagar Extension<br>Lucknow. 
@@ -100,9 +115,29 @@
 							$('#add').hide();
 							var b = 1;
 							$('#meddiv2').hide();
+							var ele = document.getElementById('meddiv2');
+							var eleCount = getCount(ele);
 							 // The DOM is ready!
 								$('#myb').on('click', function() {
-									$('#mydiv').toggleClass('clicked');
+									if(eleCount <= 6)
+									{
+										$('#mydiv').toggleClass('clicked');
+									}else if(eleCount <= 9)
+									{
+										$('#mydiv').toggleClass('clickeda');
+										$('#meddiv2').addClass('clicked');
+									}else if(eleCount <= 11)
+									{
+										$('#mydiv').toggleClass('clickedb');
+										$('#meddiv2').addClass('clickeda');
+									}else if(eleCount <= 13)
+									{
+										$('#mydiv').toggleClass('clickedc');
+										$('#meddiv2').addClass('clickedb');
+									}else{
+										$('#mydiv').toggleClass('clickedd');
+										$('#meddiv2').addClass('clickedc');
+									}									
 									if(b){
 										$('#meddiv').hide();
 										window.setTimeout(sh, 500);
@@ -129,6 +164,17 @@
 					function hi(){
 						$('#meddiv2').hide();
 					}
+					function getCount(parent){
+						var relevantChildren = 0;
+						var children = parent.childNodes.length;
+						for(var i=0; i < children; i++){
+							if(parent.childNodes[i].nodeType != 3){
+								relevantChildren++;
+							}
+						}
+						return relevantChildren;
+					}
+					
 				</script>
 	
 		</div>
