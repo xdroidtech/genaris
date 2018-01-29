@@ -20,11 +20,11 @@ html, body{
 	background-color:  #000000;
 }
 .nav-tech{
-	opacity: 0.75;
+	background-color: rgba(255,255,255,0.75);
 	transition-duration: 0.7s;
 }
 .nav-tech:hover{
-	opacity: 1;
+	background-color: rgba(255,255,255,1);
 }
 .nav-tech:active{
 	opacity: 1;
