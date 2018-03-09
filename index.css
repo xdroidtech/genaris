@@ -1,8 +1,14 @@
 html, body{
 	background-color: #f9f9fa;
 }
+body{
+	min-width: 1360px;
+}
 .position-a{
 	position:absolute;
+}
+.position-r{
+	position: relative;
 }
 .flexer{
 	box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.2);
@@ -22,6 +28,7 @@ html, body{
 .nav-tech{
 	background-color: rgba(255,255,255,0.75);
 	transition-duration: 0.7s;
+	min-width: 810px;
 }
 .nav-tech:hover{
 	background-color: rgba(255,255,255,1);
@@ -65,7 +72,9 @@ html, body{
 	position: absolute;
 	  display: flex;
      flex-direction: column;
-	 width: 770px;
+}
+.centered-pos{
+	width: 770px;
 	 left: 270px;
 	 margin-top: 100px;
 	 margin-left: 20px;
@@ -75,10 +84,7 @@ html, body{
 	height: 225px;
 	width: 100%;
 	margin-bottom: 20px;
-	transition-duration: 2s;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	transition-duration: 0.5s;
 }
 .bg-yellow{
 	background-color: #fefa87;
@@ -92,26 +98,31 @@ html, body{
 	left: 20px;
 	top: 20px;
 }
-.flex{
-	display: flex;
-	flex-direction: row;
-}
+
 h1{
 	text-align: left;
 }
 .text{
 	font-family: 'Oswald', sans-serif;
-	top: 30px;
+	text-align: center;
+	top:-150px;
+	left: 10px;
+	max-width: 800px;
 }
 .h{
 	font-weight:bold;
 }
 .spl{
-	right: 20px;
-	bottom: 30px;
+	float: right;
+	top: -100px;
+	right: -50px
+}
+.spll{
+	top: 50px;
 }
 .not-spl{
-	top: 100px;
+	text-align: center;
+	top: -130px;;
 }
 .spl2{
 	color: white;
@@ -124,10 +135,12 @@ h1{
 	height:38.5px;
 }
 .labeld{
-	width: 50%;
+	width: 450px;
 	height: 38.5px;
-	bottom: 30px;
 	display: flex;
+	float: left;
+	left:200px;
+	top: -120px;
 }
 .opac-0{
 	opacity: 0;
@@ -135,57 +148,57 @@ h1{
 .opac-1{
 	opacity:1;
 }
-#mydiv{
-	transition-duration: 0.5s;
-}
-#mydiv.clicked{
+.clicked1{
 	height: 350px;
 }
-#mydiv.clickeda{
+.clickeda1{
 	height: 390px;
 }
-#mydiv.clickedb{
+.clickedb1{
 	height: 430px;
 }
-#mydiv.clickedc{
+.clickedc1{
 	height: 470px;
 }
-#mydiv.clickedd{
+.clickedd1{
 	height: 510px;
 }
-#meddiv{
-	transition-duration: 2s;
-	flex-wrap:wrap;
-}
-#meddiv.clicked{
+.clicked{
 	height: 120px;
 }
 
-#meddiv2{
-	transition-duration: 2s;
+.medd2{
+	display: flex;
 	flex-wrap: wrap;
+	float: left;
+	max-width: 600px;
 	left: 20px;
-	height:120px;
+	bottom: 50px;
 }
-#meddiv2.clickedc{
+.clickedc2{
 	height: 210
 }
-#meddiv2.clicked{
+.clicked2{
 	height:150px;
 }
-#meddiv2.clickeda{
+.clickeda2{
 	height:170px;
 }
-#meddiv2.clickedb{
+.clickedb2{
 	height:190px;
 }
-#add{
+.adda{
 	right:30px;
-	top: 112.5px;
+	top: -300px;
+	float: right;
 	text-align: right;
 	font-size: 17px;
 }
-#rat{
-	top: 50px;
-	right: 30px;
+.whoa{
+	float: right;
+	top: -220px;
+	left: -20px;
+}
+.fl{
+	float: left;
 }
