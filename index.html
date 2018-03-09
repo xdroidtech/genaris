@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 		<link rel="stylesheet" href="index.css">
-		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Source+Sans+Pro" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Source+Sans+Pro" rel="stylesheet"> -->
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -18,7 +18,9 @@
 		
 
 </head>
-<body >
+<body>
+		<script type="text/javascript" src="index.js">
+		</script>
 		<nav class="navbar navbar-expand-sm flexer navbar-dark fixed-top nav-tech">
 			<a class="navbar-brand text-white" style="font-size:20px" href="#">
 				<kbd>The Brand</kbd>
@@ -39,24 +41,24 @@
 				</li>
 			</ul>
 		</nav>
-	<div class="float-left left-c bg-green flexer-1 rounded ">
+	<div class="float-left left-c bg-green flexer-1 rounded right">
 		
 	</div>
-	<div class="float-left left-c-1 bg-white flexer-1 rounded">
+	<div class="float-left left-c-1 bg-white flexer-1 rounded right">
 	
 	</div>
-	<div class="float-right right-c bg-white flexer-1 rounded">
+	<div class="float-right right-c bg-white flexer-1 rounded left">
 	</div>
-	<div class="float-right rounded bg-yellow flexer-1 right-c-1">
+	<div class="float-right rounded bg-yellow flexer-1 right-c-1 left" data-toggle="affix" data-offset-top="600px">
 	</div>
-	<div class="centered">
-		<div id="mydiv" class="blocks flexer-1 bg-white rounded flex">
-			<div id="pic" class="rounded-circle flexer bg-dark position-a"><img src="e.jpeg" height="175px" width="175px" class="rounded-circle"/></div>
-			<h1 class="text position-a h">Casey Neistat Pharma</h1>
-			<span class="not-spl position-a"><p>Distance from you: <kbd class="bg-success">5.2m</kbd></p></span>
+	<div class="rr centered centered-pos">
+		<div id="mydiv" class="blocks flexer-1 bg-white rounded">
+			<div id="pic" class="rounded-circle flexer bg-dark position-r"><img src="e.jpeg" height="175px" width="175px" class="rounded-circle"/></div>
+			<h1 class="text position-r h">Casey Neistat Pharma</h1>
+			<span class="not-spl position-r"><p>Distance from you: <kbd class="bg-success">5.2m</kbd></p></span>
 			<span class="rounded"></span>
-			<kbd id="rat" class="bg-success position-a">Amazing!</kbd>
-			<div id="meddiv" class="position-a labeld">
+			<kbd id="rat" class="bg-success position-r whoa">Amazing!</kbd>
+			<div id="meddiv" class="position-r labeld hell visible">
 					<span id="div1" class="spl2" style="background: linear-gradient(50deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
 					Zoloft
 					</span>
@@ -64,7 +66,7 @@
 					Xanax XR
 					</span>
 			</div>
-			<div id="meddiv2" class="position-a labeld">
+			<div id="meddiv2" class="position-r hello medd2">
 					<span id="div1" class="spl2" style="background: linear-gradient(50deg,rgb(87, 51, 234), rgb(72, 148, 255) 70%);">
 					Zoloft
 					</span>
@@ -93,91 +95,16 @@
 					Xanax XR
 					</span>
 			</div>
-			<span id="add" class="position-a">
+			<button type="button" id="myb" class="rel btn position-r spl" onclick="clicke(this)">See More.</button>
+			<span id="add" class="position-r adda a">
 				6/191,Vaishnav Khand<br>Gomti Nagar Extension<br>Lucknow. 
-			</span>
-			<button id="myb" class="rel btn position-a spl">
-				See More.
-			</button>
-				<script>
-					 (function(yourcode){
+			</span>			
+	
+		</div>		
 
-							// The global jQuery object is passed as a parameter
-							yourcode(window.jQuery, window, document);
-
-				  }(function($, window, document) {
-
-							// The $ is now locally scoped 
-
-						   // Listen for the jQuery ready event on the document
-						   
-						   $(function() {
-							$('#add').hide();
-							var b = 1;
-							$('#meddiv2').hide();
-							var ele = document.getElementById('meddiv2');
-							var eleCount = getCount(ele);
-							 // The DOM is ready!
-								$('#myb').on('click', function() {
-									if(eleCount <= 6)
-									{
-										$('#mydiv').toggleClass('clicked');
-									}else if(eleCount <= 9)
-									{
-										$('#mydiv').toggleClass('clickeda');
-										$('#meddiv2').addClass('clicked');
-									}else if(eleCount <= 11)
-									{
-										$('#mydiv').toggleClass('clickedb');
-										$('#meddiv2').addClass('clickeda');
-									}else if(eleCount <= 13)
-									{
-										$('#mydiv').toggleClass('clickedc');
-										$('#meddiv2').addClass('clickedb');
-									}else{
-										$('#mydiv').toggleClass('clickedd');
-										$('#meddiv2').addClass('clickedc');
-									}									
-									if(b){
-										$('#meddiv').hide();
-										window.setTimeout(sh, 300);
-										$('#add').fadeIn();
-										$(this).text('See Less.');
-										b =0;
-
-									}else{
-										$('#meddiv').show();
-										hi();
-										$('#add').fadeOut();
-										$(this).text('See More.');
-										b=1;
-									}
-									//$('#meddiv').show();
-								});
-						   });
-
-						   // The rest of the code goes here!}
-					}));
-					function sh(){
-						$('#meddiv2').fadeIn();
-					}
-					function hi(){
-						$('#meddiv2').hide();
-					}
-					function getCount(parent){
-						var relevantChildren = 0;
-						var children = parent.childNodes.length;
-						for(var i=0; i < children; i++){
-							if(parent.childNodes[i].nodeType != 3){
-								relevantChildren++;
-							}
-						}
-						return relevantChildren;
-					}
-					
-				</script>
 	
 		</div>
 	</div>
+	
 </body>
 </html>
